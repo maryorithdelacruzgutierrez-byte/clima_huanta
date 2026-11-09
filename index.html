@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Clima de Huanta</title>
+<style>
+body{font-family:Arial;background:#e8f4ff;text-align:center;padding:20px}
+.caja{background:white;padding:20px;border-radius:15px;max-width:400px;margin:auto}
+h1{color:#0077cc}
+button{background:#0077cc;color:white;border:none;padding:10px 15px;border-radius:10px;margin:5px}
+</style>
+</head>
+<body>
+<div class="caja">
+<h1>🌤️ Clima de Huanta</h1>
+<p>Ayacucho - Perú</p>
+<h2 id="temp">18°C</h2>
+<p id="desc">Soleado en Huanta</p>
+<button onclick="cambiar('Mañana')">Mañana</button>
+<button onclick="cambiar('Tarde')">Tarde</button>
+<button onclick="cambiar('Noche')">Noche</button>
+<p id="info">Toca un botón para ver el clima</p>
+</div>
+<script>
+function cambiar(momento){
+if(momento=='Mañana'){document.getElementById('temp').innerText='14°C';document.getElementById('desc').innerText='Frío y despejado';document.getElementById('info').innerText='En la mañana hace frío en Huanta, abrígate.'}
+if(momento=='Tarde'){document.getElementById('temp').innerText='20°C';document.getElementById('desc').innerText='Soleado y cálido';document.getElementById('info').innerText='En la tarde sale el sol fuerte en Huanta.'}
+if(momento=='Noche'){document.getElementById('temp').innerText='11°C';document.getElementById('desc').innerText='Noche fría';document.getElementById('info').innerText='En la noche baja bastante la temperatura.'}
+}
+</script>
+</body>
+</html>
